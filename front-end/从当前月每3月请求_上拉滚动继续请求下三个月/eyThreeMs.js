@@ -62,29 +62,23 @@ $(document).on('refresh', '.pull-to-refresh-content', function (e) {
 //请求更多
 function toLoad(flag) {
     setTimeout(function () {
-        if(swzdV.beforemonth===1) {
-            return;
-        }
         sLoading = false;
         pLoading = false;
-        var cxrqz = swzdV.getLastDay(swzdV.currentYear, swzdV.beforemonth - 1);
-        var cxrqq = `${swzdV.currentYear}-${swzdV.checkTime(swzdV.beforemonth - 1)}`;
-      
-
-        var params = swzdV.getParamsByTab(cxrqq, cxrqz);
-        if (cxrqq === lastDay) {
-            if (swzdV.hasmore) {
-                swzdV.toSearch(params);
-            }
-            swzdV.hasmore = false;
-            $.detachInfiniteScroll($('.infinite-scroll'));
-            return;
-        }
-        if (swzdV.hasmore) {
-            swzdV.toSearch(params);
-        }
         if (flag === 'pull') {
             $.pullToRefreshDone('.pull-to-refresh-content');
         }
+        if(swzdV.beforemonth===1) {
+            return;
+        }
+        var cxrqz = swzdV.getLastDay(swzdV.currentYear, swzdV.beforemonth - 1);
+        var cxrqq = `${swzdV.currentYear}-${swzdV.checkTime(swzdV.beforemonth - 1)}`;
+        var params = swzdV.getParamsByTab(cxrqq, cxrqz);
+
+        if (cxrqq === lastDay) {
+                swzdV.toSearch(params);
+            $.detachInfiniteScroll($('.infinite-scroll'));
+            return;
+        }
+            swzdV.toSearch(params);
     }, 1000);
 }
