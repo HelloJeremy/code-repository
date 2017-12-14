@@ -52,3 +52,13 @@ function getLastDay(year, month) {
     }
     return `${year}-${_month}-${day}`;
 }
+
+//js中日期的比较_日期字符串转毫秒
+function dateStrToDate(dateStr) {
+    var d = new Date(dateStr.replace(/-/g, "/"));
+    return d.getTime();
+}
+
+var ssq = $('#fbsjq').val();
+var ssz = $('#fbsjz').val();
+if (dateStrToDate(ssq) > dateStrToDate(ssz))
