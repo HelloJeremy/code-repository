@@ -42,6 +42,8 @@
 ## 参考博客
 [Spring Boot+JSP启动报404错误找不到页面](https://blog.csdn.net/ab7253957/article/details/78022860)
 
+[IntelliJ IDEA 使用教程(2017图文版)](https://www.jianshu.com/p/9c65b7613c30)
+
 
 
 
