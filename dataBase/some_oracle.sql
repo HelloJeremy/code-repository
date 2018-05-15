@@ -12,3 +12,6 @@ select * from all_tables where table_name like '%xxxx'
 
 -- 生成表的同义词的语句(表名1和表名2保持一致)
 create public synonym 表名1 for 用户.表名2
+
+--大数据类型转字符串方法
+select DBMS_LOB.SUBSTR(lobField, 3000) AS str from table;
