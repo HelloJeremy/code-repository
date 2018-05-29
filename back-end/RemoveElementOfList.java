@@ -29,3 +29,16 @@ for(Map<String, Object> temp : resMap) {
            list2.add(next);
         }
     }
+
+//动态向map中添加元素
+ List<Map<String, String>> sbmxs = (List<Map<String, String>>)maps.get("sbmxs");
+    for(Map<String, String> sbmx: sbmxs) {
+        String  sfmxsb = sbmx.get("sfmxsb");
+        if("1".equals(sfmxsb)) {
+            sbmx.put("sfmxsbMc","是");
+        } else {
+            sbmx.put("sfmxsbMc","否");
+        }
+    }
+
+
