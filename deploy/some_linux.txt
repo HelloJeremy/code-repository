@@ -2,4 +2,6 @@ Maven(本地打包):
 	$ mvn clean install -Dmaven.test.skip=true (mvn clean install -DskipTests)
 	
 Linux命令：
-	列出所有用户：cat /etc/passwd |cut -f 1 -d:
+    1.进入用户主目录：cd ~
+        ps:～在Linux中代表用户主目录。对于root用户，～表示/root，对一般用户，～默认表示/home/（用户名）。如果要查看～的真实面貌，可以先进入～目录，然后用pwd -P命令查看～的绝对路径（1.cd ~  2.pwd -P）。
+	2.列出所有用户：cat /etc/passwd |cut -f 1 -d:
