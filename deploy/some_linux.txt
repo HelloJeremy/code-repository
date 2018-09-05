@@ -1,2 +1,5 @@
 Maven(本地打包):
 	$ mvn clean install -Dmaven.test.skip=true (mvn clean install -DskipTests)
+	
+Linux命令：
+	列出所有用户：cat /etc/passwd |cut -f 1 -d:
