@@ -44,6 +44,8 @@
 
 [IntelliJ IDEA 使用教程(2017图文版)](https://www.jianshu.com/p/9c65b7613c30)
 
+[找回IntelliJ IDEA中 丢失的Run Dashboard 视图](https://blog.csdn.net/rfrftt/article/details/80024116)
+
 
 
 
