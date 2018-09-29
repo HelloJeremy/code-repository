@@ -1,0 +1,25 @@
+直接打开run.bat，输入1启动nginx服务，目前已配置好如下几个服务映射
+
+#static
+location /static {
+	alias	../../platform/web/static/src/main/webapp;
+	index  index.html index.htm;
+	add_header Cache-Control no-store;
+	expires -1;
+}
+#config
+location /config {  
+	proxy_pass http://localhost:8081/config;
+}
+#app
+location /app {  
+	proxy_pass http://localhost:8082/app;
+} 
+#appfront
+location /appfront {  
+	proxy_pass http://localhost:8083/appfront;
+} 
+#appres
+location /appres {  
+	proxy_pass http://localhost:8084/appres;
+} 
